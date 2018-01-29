@@ -1,6 +1,9 @@
 package vn.edu.tdmu.models;
 
 import com.fasterxml.jackson.annotation.JsonView;
+
+import vn.edu.tdmu.enums.Country;
+
 import org.hibernate.validator.constraints.NotEmpty;
 
 
@@ -38,7 +41,7 @@ public class Playlist extends BaseEntity{
 
     @JsonView(Views.Summary.class)
     @Column(name = "country")
-    private String country;
+    private String country = Country.UNKNOWN.getCountry();
 
     @JsonView(Views.Summary.class)
     @Column(name = "image_url")

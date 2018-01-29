@@ -6,6 +6,8 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 import com.fasterxml.jackson.annotation.JsonView;
 
+import vn.edu.tdmu.enums.Country;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -43,7 +45,7 @@ public final class Song extends BaseEntity{
 
     @JsonView(Views.Summary.class)
     @Column(name = "country")
-    private String country;
+    private String country = Country.UNKNOWN.getCountry();
 
     @JsonView(Views.Summary.class)
     @Column(name = "image_url")

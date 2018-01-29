@@ -7,9 +7,13 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import javax.validation.constraints.Size;
+
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
+
+import vn.edu.tdmu.annotations.PhoneNumber;
+import vn.edu.tdmu.enums.State;;
 
 /**
  * Created by nguye on 1/26/2018.
@@ -61,6 +65,7 @@ public class User extends BaseEntity{
     private Date birthDate;
 
     @JsonView(Views.ExtendedPublic.class)
+    @PhoneNumber
     @Column(name = "phone_number", nullable = true)
     private String phoneNumber;
 
@@ -74,7 +79,7 @@ public class User extends BaseEntity{
 
     @JsonView(Views.ExtendedPublic.class)
     @Column(name = "state", nullable = false)
-    private String state;
+    private String state = State.ACTIVE.getState();
 
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "user_playlist_mappings", joinColumns = {@JoinColumn(name = "user_id")}, inverseJoinColumns = {@JoinColumn(name = "role_id")})
