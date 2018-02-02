@@ -230,6 +230,36 @@ public final class Song extends BaseEntity{
         this.type = type;
     }
 
+    public Artist addArtist(Artist artist) {
+        if (this.artists.contains(artist)) {
+            return null;
+        }
+        this.artists.add(artist);
+        return artist;
+    }
+
+    public void update(String newName, String newUrl, Integer newTotalViews, Integer newWeekViews, String newCountry, String newDescription,
+                       Boolean newOnHome, Boolean newIsPublished, Genre newGenre, String newType) {
+        this.name = newName;
+        this.url = newUrl;
+        this.totalView = newTotalViews;
+        this.weekViews = newWeekViews;
+        this.country = newCountry;
+        this.description = newDescription;
+        this.onHome = newOnHome;
+        this.isPublished = newIsPublished;
+        this.genre = newGenre;
+        this.type = newType;
+    }
+
+    public boolean removeArtist(Artist artist) {
+        return this.artists.remove(artist);
+    }
+
+    public void incrementViews() {
+        this.weekViews += 1;
+        this.totalView += 1;
+    }
 
     @Override
     public int hashCode() {

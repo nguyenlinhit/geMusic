@@ -224,6 +224,29 @@ public class Playlist extends BaseEntity{
         this.type = type;
     }
 
+    public void update(String newName, Integer newTotalViews, Integer newWeekViews, String newCountry, Artist newArtist, Genre newGenre,
+                       String newType, Boolean newOnHome, Week newWeek, Boolean newSlideActived){
+        this.name = newName;
+        this.totalViews = newTotalViews;
+        this.weekViews = newWeekViews;
+        this.country = newCountry;
+        this.artist = newArtist;
+        this.genre = newGenre;
+        this.type = newType;
+        this.onHome = newOnHome;
+        this.week = newWeek;
+        this.slideActived = newSlideActived;
+    }
+
+    public void addSongPlaylist(SongPlaylist songPlaylists){
+        this.songPlaylists.add(songPlaylists);
+    }
+
+    public void incrementViews(){
+        this.weekViews += 1;
+        this.totalViews += 1;
+    }
+
     @Override
     public int hashCode() {
         int hash = 0;

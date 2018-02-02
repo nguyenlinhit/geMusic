@@ -120,6 +120,15 @@ public class Week extends BaseEntity{
         this.description = description;
     }
 
+    public void update(Integer newNo, String newName, Date newStartDate, Date newEndDate, String newDescription) {
+        this.no = newNo;
+        this.name = newName;
+        this.startDate = newStartDate;
+        this.endDate = newEndDate;
+        this.description = newDescription;
+    }
+
+
     @Override
     public int hashCode() {
         int hash = 0;

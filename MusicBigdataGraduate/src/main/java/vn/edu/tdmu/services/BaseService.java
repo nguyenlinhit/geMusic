@@ -6,15 +6,15 @@ import java.util.List;
 import org.springframework.security.access.prepost.PreAuthorize;
 
 /**
- * 
+ * @author Creted by NguyenLinh on 01/29/2018
  */
 public interface BaseService<T, ID extends Serializable>{
-    public List<T> findAll();
+    List<T> findAll();
 
-    public T findById(ID id);
+    T findById(ID id);
 
-    public T create(T newEntry);
+    T create(T newEntry);
 
     @PreAuthorize("hasRole('ADMIN') AND hasRole('DBA')")
-    public void delete(ID id);
+    void delete(ID id);
 }
