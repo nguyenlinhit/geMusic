@@ -13,7 +13,6 @@ import org.slf4j.LoggerFactory;
 import vn.edu.tdmu.exceptions.UserNotFoundException;
 import vn.edu.tdmu.models.Playlist;
 import vn.edu.tdmu.models.User;
-import vn.edu.tdmu.repositories.PlaylistRepository;
 import vn.edu.tdmu.repositories.UserRepository;
 
 /**
@@ -25,14 +24,12 @@ public class UserServiceImpl implements UserService{
     private static final Logger LOGGER = LoggerFactory.getLogger(UserServiceImpl.class);
 
     private final UserRepository repository;
-
-    //@Autowired
-    //private final PasswordEncoder passwordEncoder;
+    private final PasswordEncoder passwordEncoder;
 
     @Autowired
-    public UserServiceImpl(UserRepository repository, PlaylistRepository playlistRepository) {
-        super();
+    public UserServiceImpl(UserRepository repository, PasswordEncoder passwordEncoder) {
         this.repository = repository;
+        this.passwordEncoder = passwordEncoder;
     }
 
     @Override
@@ -79,7 +76,7 @@ public class UserServiceImpl implements UserService{
     @Override
     @Transactional
     public User create(User newEntry) {
-        //newEntry.setPassword(passwordEncoder.encode(newEntry.getPassword()));
+        newEntry.setPassword(this.passwordEncoder.encode(newEntry.getPassword()));
         LOGGER.info("Creating a new user entry by using information: {}", newEntry);
 
         User created = repository.save(newEntry);
@@ -133,7 +130,7 @@ public class UserServiceImpl implements UserService{
     public User updatePassword(Integer id, String newPassword) {
         User updated = findUserEntryById(id);
 
-        //updated.setPassword(passwordEncoder.encode(newPassword));
+        updated.setPassword(this.passwordEncoder.encode(newPassword));
         repository.flush();
 
         return updated;

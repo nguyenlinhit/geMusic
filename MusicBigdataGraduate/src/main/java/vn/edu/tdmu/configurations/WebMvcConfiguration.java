@@ -26,7 +26,6 @@ import java.util.List;
 /**
  * @author Created by NguyenLinh on 01/29/2018
  */
-@SuppressWarnings("deprecation")
 @Configuration
 @EnableWebMvc
 public class WebMvcConfiguration extends WebMvcConfigurerAdapter{

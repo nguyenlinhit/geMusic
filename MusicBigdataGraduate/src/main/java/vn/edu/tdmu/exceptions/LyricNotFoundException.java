@@ -6,7 +6,8 @@ package vn.edu.tdmu.exceptions;
  */
 public class LyricNotFoundException extends RuntimeException {
 
-    private final Integer id;
+    private static final long serialVersionUID = 1L;
+	private final Integer id;
 
     public LyricNotFoundException(Integer id) {
         this.id = id;

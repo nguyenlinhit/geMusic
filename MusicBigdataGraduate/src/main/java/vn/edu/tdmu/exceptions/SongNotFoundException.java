@@ -5,7 +5,8 @@ package vn.edu.tdmu.exceptions;
  *
  */
 public class SongNotFoundException extends RuntimeException{
-    private final Integer id;
+    private static final long serialVersionUID = 1L;
+	private final Integer id;
 
     public SongNotFoundException(Integer id) {
         this.id = id;

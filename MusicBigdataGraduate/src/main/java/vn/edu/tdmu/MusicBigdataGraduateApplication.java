@@ -8,6 +8,7 @@ import org.springframework.boot.web.support.SpringBootServletInitializer;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.WebApplicationContext;
@@ -23,9 +24,6 @@ import java.util.EnumSet;
 
 
 @SpringBootApplication
-@Configuration
-@EnableAutoConfiguration(exclude = {ApplicationContext.class})
-@ComponentScan("vn.edu.tdmu")
 public class MusicBigdataGraduateApplication extends SpringBootServletInitializer implements WebApplicationInitializer {
 
     private static final String CHARACTER_ENCODING_FILTER_ENCODING = "UTF-8";

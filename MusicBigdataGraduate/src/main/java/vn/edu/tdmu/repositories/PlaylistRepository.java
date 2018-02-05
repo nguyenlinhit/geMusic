@@ -16,7 +16,7 @@ import java.util.List;
 public interface PlaylistRepository extends BaseRepository<Playlist, Integer>{
     List<Playlist> findByNameContainsIgnoreCase(String name);
 
-    List<Playlist> findTop5BySlideActivedOrderByDesc(Boolean actived);
+    List<Playlist> findTop5BySlideActivedOrderByIdDesc(Boolean actived);
 
     Page<Playlist> findByOnHomeInAndTypeIn(Collection<Boolean> onHomes, Collection<String> types, Pageable pageable);
 
@@ -26,9 +26,9 @@ public interface PlaylistRepository extends BaseRepository<Playlist, Integer>{
 
     Playlist findFirstByWeekAndTypeAndCountry(Week week, String type, String country);
 
-    List<Playlist>  findByCreateByUserOrderByIdDesc(String name);
+    List<Playlist>  findByCreatedByUserOrderByIdDesc(String name);
 
-    List<Playlist> findTop3ByCreateByUserOrderByIdDesc(String name);
+    List<Playlist> findTop3ByCreatedByUserOrderByIdDesc(String name);
 
     List<Playlist> findTop4ByTypeInAndArtistOrderByIdDesc(Collection<String> types, Artist artist);
 

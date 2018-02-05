@@ -4,12 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -31,21 +29,23 @@ import javax.sql.DataSource;
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
-
-    private final DataSource dataSource;
-    private final UserDetailsService userDetailsService;
-    private final AjaxAuthenticationSuccessHandler ajaxLoginSuccessHandler;
-    private final AjaxAuthenticationFailureHandler ajaxLoginFailureHandler;
-    private final CustomLogoutSuccessHandler logoutSuccessHandler;
+    @Autowired
+    DataSource dataSource;
 
     @Autowired
-    public SecurityConfiguration(@Qualifier("dataSource") DataSource dataSource, @Qualifier("customUserDetailsService") UserDetailsService userDetailsService, AjaxAuthenticationSuccessHandler ajaxLoginSuccessHandler, AjaxAuthenticationFailureHandler ajaxLoginFailureHandler, CustomLogoutSuccessHandler logoutSuccessHandler) {
-        this.dataSource = dataSource;
-        this.userDetailsService = userDetailsService;
-        this.ajaxLoginSuccessHandler = ajaxLoginSuccessHandler;
-        this.ajaxLoginFailureHandler = ajaxLoginFailureHandler;
-        this.logoutSuccessHandler = logoutSuccessHandler;
-    }
+    @Qualifier("customUserDetailsService")
+    UserDetailsService userDetailsService;
+
+    @Autowired
+    AjaxAuthenticationSuccessHandler ajaxLoginSuccessHandler;
+
+    @Autowired
+    AjaxAuthenticationFailureHandler ajaxLoginFailureHandler;
+    
+    @Autowired
+    CustomLogoutSuccessHandler logoutSuccessHandler;
+
+    
 
     @Autowired
     public void configureGlobalSecurity(AuthenticationManagerBuilder auth) throws Exception {
@@ -65,19 +65,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .and().logout().deleteCookies("JSESSIONID").logoutSuccessHandler(logoutSuccessHandler)
                 .and().csrf()
                 .and().exceptionHandling().accessDeniedPage("/access_denied");
-    }
-
-    @Override
-    public void configure(WebSecurity web) throws Exception {
-        //Spring Security ignores request to static resources such as CSS or JS files.
-        web
-                .ignoring()
-                .antMatchers("/static/**")
-                //.antMatchers(HttpMethod.POST, "/rest/**")
-                .antMatchers(HttpMethod.POST, "/admin/song/*/AddArtist")
-                .antMatchers(HttpMethod.POST, "/admin/song/*/RemoveArtist")
-                .antMatchers(HttpMethod.POST, "/admin/playlist/*/AddSongs")
-                .antMatchers(HttpMethod.POST, "/admin/playlist/*/UpdateSongPlaylist-*");
     }
 
     @Bean

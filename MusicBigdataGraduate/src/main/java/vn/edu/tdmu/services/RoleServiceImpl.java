@@ -9,7 +9,6 @@ import vn.edu.tdmu.exceptions.RoleNotFoundException;
 import vn.edu.tdmu.models.Role;
 import vn.edu.tdmu.repositories.RoleRepository;
 
-import java.io.EOFException;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;

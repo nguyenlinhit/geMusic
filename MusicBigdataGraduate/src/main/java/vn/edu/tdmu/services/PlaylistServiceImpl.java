@@ -122,7 +122,7 @@ public class PlaylistServiceImpl implements PlaylistService{
     public List<Playlist> getSlideActivePlaylist() {
         LOGGER.info("Finding all playlist entries by slideActived: true.");
 
-        List<Playlist> playlistEntries = this.repository.findTop5BySlideActivedOrderByDesc(true);
+        List<Playlist> playlistEntries = this.repository.findTop5BySlideActivedOrderByIdDesc(true);
         LOGGER.info("Found {} playlist entries", playlistEntries.size());
         return playlistEntries;
     }
@@ -151,7 +151,7 @@ public class PlaylistServiceImpl implements PlaylistService{
     public Playlist getLatestTopPlaylist(String country) {
         LOGGER.info("Finding lastest top playlist entry by country: {}", country);
 
-        Week lastestWeek = weekRepository.findFirstByOOrderByEndDateDesc();
+        Week lastestWeek = weekRepository.findFirstByOrderByEndDateDesc();
         Playlist playlistEntry = this.repository.findFirstByWeekAndTypeAndCountry(lastestWeek, PlaylistType.TOP.getPlaylistType(), country);
         LOGGER.info("Found playlist entry: {}", playlistEntry);
 
@@ -164,7 +164,7 @@ public class PlaylistServiceImpl implements PlaylistService{
 
         LOGGER.info("Finding Top 3 playlist entries by username: {}", username);
 
-        List<Playlist> playlistEntries = this.repository.findTop3ByCreateByUserOrderByIdDesc(username);
+        List<Playlist> playlistEntries = this.repository.findTop3ByCreatedByUserOrderByIdDesc(username);
 
         LOGGER.info("Found {} playlit entries", playlistEntries.size());
 
@@ -172,17 +172,17 @@ public class PlaylistServiceImpl implements PlaylistService{
     }
 
     @Override
-    @SuppressWarnings("uncheked")
+    @SuppressWarnings("unchecked")
     @Transactional(readOnly = true)
     public List<Playlist> getAllUserPlaylists(String username) {
         LOGGER.info("Finding ALL playlist entries by username: {}", username);
 
-        List<Playlist> playlistEntries = this.repository.findByCreateByUserOrderByIdDesc(username);
+        List<Playlist> playlistEntries = this.repository.findByCreatedByUserOrderByIdDesc(username);
         List<Playlist> playlistEntries2 = this.repository.findByUsersUsername(username);
 
         List<Playlist> playlistFinal = ListUtils.union(playlistEntries, playlistEntries2);
 
-        return playlistEntries;
+        return playlistFinal;
     }
 
     @Override

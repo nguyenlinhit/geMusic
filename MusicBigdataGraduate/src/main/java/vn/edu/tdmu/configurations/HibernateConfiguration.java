@@ -53,15 +53,15 @@ import vn.edu.tdmu.common.UsernameAuditorAware;
         HikariConfig dataSourceConfig = new HikariConfig();
 
         dataSourceConfig.setDriverClassName(env.getRequiredProperty(PROPERTY_NAME_DB_DRIVER_CLASS));
-        dataSourceConfig.setJdbcUrl(PROPERTY_NAME_DB_URL);
-        dataSourceConfig.setUsername(PROPERTY_NAME_DB_USER);
-        dataSourceConfig.setPassword(PROPERTY_NAME_DB_PASSWORD);
+        dataSourceConfig.setJdbcUrl(env.getRequiredProperty(PROPERTY_NAME_DB_URL));
+        dataSourceConfig.setUsername(env.getRequiredProperty(PROPERTY_NAME_DB_USER));
+        dataSourceConfig.setPassword(env.getRequiredProperty(PROPERTY_NAME_DB_PASSWORD));
 
         return new HikariDataSource(dataSourceConfig);
     }
 
     @Bean
-    public LocalContainerEntityManagerFactoryBean entityManagerFactory(@Qualifier("dataSource") DataSource dataSource, Environment env){
+    public LocalContainerEntityManagerFactoryBean entityManagerFactory(DataSource dataSource, Environment env){
         LocalContainerEntityManagerFactoryBean entityManagerFactoryBean = new LocalContainerEntityManagerFactoryBean();
         entityManagerFactoryBean.setDataSource(dataSource);
         entityManagerFactoryBean.setJpaVendorAdapter(new HibernateJpaVendorAdapter());

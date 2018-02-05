@@ -7,5 +7,5 @@ import vn.edu.tdmu.models.Week;
  *
  */
 public interface WeekRepository extends BaseRepository<Week, Integer>{
-    Week findFirstByOOrderByEndDateDesc();
+    Week findFirstByOrderByEndDateDesc();
 }

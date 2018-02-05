@@ -15,8 +15,6 @@ import java.util.*;
 @Entity
 @Table(name = "artists")
 public class Artist {
-    private static final long serialVersionUID = 1L;
-
     @JsonView(Views.Summary.class)
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

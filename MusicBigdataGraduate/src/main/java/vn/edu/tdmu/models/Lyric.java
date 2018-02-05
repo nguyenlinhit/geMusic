@@ -14,8 +14,6 @@ import java.util.List;
 @Entity
 @Table(name = "lyrics")
 public class Lyric {
-    private static final long serialVersionUID = 1L;
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "lyric_id", nullable = false, unique = true)
@@ -29,7 +27,7 @@ public class Lyric {
     @Column(name = "body_txt", nullable = false)
     private String body;
 
-    @OneToMany(mappedBy = "lyric")
+    @OneToMany(mappedBy = "lyric_id")
     private List<Song> songs = new ArrayList<>();
 
     public Lyric() {

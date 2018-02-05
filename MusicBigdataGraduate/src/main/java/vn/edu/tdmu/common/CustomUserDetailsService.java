@@ -24,13 +24,8 @@ import java.util.List;
 @Service("customUserDetailsService")
 public class CustomUserDetailsService implements UserDetailsService {
     private static final Logger LOGGER = LoggerFactory.getLogger(CustomUserDetailsService.class);
-
-    private final UserService userService;
-
     @Autowired
-    public CustomUserDetailsService(UserService userService) {
-        this.userService = userService;
-    }
+    private UserService userService;
 
     @Override
     @Transactional(readOnly = true)

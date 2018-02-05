@@ -14,16 +14,12 @@ import vn.edu.tdmu.utils.WebInvocationPrivilegeEvaluatorUtil;
  *
  */
 @Configuration
-@EnableAutoConfiguration(exclude = {WebMvcConfiguration.class, HibernateConfiguration.class, SecurityConfiguration.class})
+@Import({WebMvcConfiguration.class, HibernateConfiguration.class, SecurityConfiguration.class})
 @ComponentScan("vn.edu.tdmu")
 public class ApplicationContext {
-    private final
+    @Autowired
     WebInvocationPrivilegeEvaluatorUtil wipe;
 
-    @Autowired
-    public ApplicationContext(WebInvocationPrivilegeEvaluatorUtil wipe) {
-        this.wipe = wipe;
-    }
 
     @Bean
     PropertySourcesPlaceholderConfigurer propertyPlaceHolderConfigurer() {

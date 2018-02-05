@@ -5,7 +5,8 @@ package vn.edu.tdmu.exceptions;
  *
  */
 public class RoleNotFoundException extends RuntimeException {
-    private final Integer id;
+    private static final long serialVersionUID = 1L;
+	private final Integer id;
 
     public RoleNotFoundException(Integer id) {
         this.id = id;

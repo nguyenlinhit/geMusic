@@ -2,6 +2,7 @@ package vn.edu.tdmu.common;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.DefaultRedirectStrategy;
 import org.springframework.security.web.RedirectStrategy;
@@ -44,7 +45,7 @@ public class CustomLogoutSuccessHandler implements LogoutSuccessHandler {
             redirectStrategy.sendRedirect(request, response, referrer);
         }
     }
-
+    
     private boolean requiresAuthentication(String uri, Authentication authentication) {
         WebInvocationPrivilegeEvaluator wipe = WebInvocationPrivilegeEvaluatorUtil.getWebInvocationPrivilegeEvaluator();
         return wipe.isAllowed(uri, authentication);

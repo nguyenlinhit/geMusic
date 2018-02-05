@@ -5,7 +5,8 @@ package vn.edu.tdmu.exceptions;
  *
  */
 public class PlaylistTypeNotFoundException extends RuntimeException {
-    private final Integer id;
+    private static final long serialVersionUID = 1L;
+	private final Integer id;
 
     public PlaylistTypeNotFoundException(Integer id) {
         this.id = id;
