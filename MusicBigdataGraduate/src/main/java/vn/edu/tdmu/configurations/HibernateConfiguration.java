@@ -5,8 +5,8 @@ import java.util.Properties;
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
 import org.springframework.data.auditing.DateTimeProvider;
@@ -31,7 +31,7 @@ import vn.edu.tdmu.common.UsernameAuditorAware;
  */
 
  @Configuration
- @EnableJpaAuditing(dateTimeProviderRef =  "dataTimeProvider")
+ @EnableJpaAuditing(dateTimeProviderRef =  "dateTimeProvider")
  @EnableJpaRepositories(basePackages = "vn.edu.tdmu.repositories")
  @EnableTransactionManagement
  @EnableSpringDataWebSupport

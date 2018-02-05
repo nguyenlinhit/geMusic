@@ -14,11 +14,13 @@ import java.util.*;
 
 @Entity
 @Table(name = "artists")
-public class Artist {
-    @JsonView(Views.Summary.class)
+public class Artist extends BaseEntity{
+    private static final long serialVersionUID = 1L;
+
+	@JsonView(Views.Summary.class)
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "lyric_id", nullable = false, unique = true)
+    @Column(name = "artist_id", nullable = false, unique = true)
     private Integer id;
 
     @JsonView(Views.Summary.class)

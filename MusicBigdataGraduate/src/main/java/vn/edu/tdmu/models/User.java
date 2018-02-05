@@ -82,7 +82,7 @@ public class User extends BaseEntity{
     private String state = State.ACTIVE.getState();
 
     @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(name = "user_playlist_mappings", joinColumns = {@JoinColumn(name = "user_id")}, inverseJoinColumns = {@JoinColumn(name = "role_id")})
+    @JoinTable(name = "user_role_mappings", joinColumns = {@JoinColumn(name = "user_id")}, inverseJoinColumns = {@JoinColumn(name = "role_id")})
     private Set<Role> roles = new HashSet<Role>();
 
     @ManyToMany(fetch = FetchType.LAZY)
