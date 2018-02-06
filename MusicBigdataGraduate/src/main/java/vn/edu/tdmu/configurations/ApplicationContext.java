@@ -13,8 +13,8 @@ import vn.edu.tdmu.utils.WebInvocationPrivilegeEvaluatorUtil;
  *
  */
 @Configuration
-@Import({WebMvcConfiguration.class, HibernateConfiguration.class, SecurityConfiguration.class})
 @ComponentScan({"vn.edu.tdmu", "vn.edu.tdmu.common"})
+@Import({WebMvcConfiguration.class, HibernateConfiguration.class, SecurityConfiguration.class})
 public class ApplicationContext {
     @Autowired
     WebInvocationPrivilegeEvaluatorUtil wipe;

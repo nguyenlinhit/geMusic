@@ -1,11 +1,8 @@
 package vn.edu.tdmu.models;
 
 import javax.persistence.*;
-
 import org.hibernate.validator.constraints.NotEmpty;
-
 import com.fasterxml.jackson.annotation.JsonView;
-
 import vn.edu.tdmu.enums.Country;
 
 import java.util.HashSet;
