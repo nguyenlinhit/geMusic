@@ -5,11 +5,11 @@ package vn.edu.tdmu.enums;
  */
 
 public enum Country{
-    UNKNOWN("Unknown"),VN("Việt Nam"),US("United States"),UK("United Kingdom"), FR("France"), KR("Korea");
+    UNKNOWN("Unknown"),VN("Việt Nam"),US("United States"),UK("United Kingdom"), FR("France"), KR("Korea"), CA("Canada");
 
     String country;
 
-    private Country(String country){
+    Country(String country){
         this.country = country;
     }
 
