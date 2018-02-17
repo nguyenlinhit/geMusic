@@ -18,7 +18,6 @@ public class Lyric extends BaseEntity{
 
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "lyric_id", nullable = false, unique = true)
     private Integer id;
 
     @NotEmpty

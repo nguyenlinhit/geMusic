@@ -27,7 +27,6 @@ public class UsernameAuditorAware implements AuditorAware<String>{
             LOGGER.debug("Current user is anonymus. Returning null.");
         }
 
-        assert authentication != null;
         Object principal = authentication.getPrincipal();
 
         if (principal instanceof UserDetails){

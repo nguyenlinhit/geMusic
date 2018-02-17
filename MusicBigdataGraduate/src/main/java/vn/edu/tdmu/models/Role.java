@@ -20,7 +20,6 @@ public class Role extends BaseEntity{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "role_id", nullable = false, unique = true)
     private Integer id;
 
     @NotEmpty

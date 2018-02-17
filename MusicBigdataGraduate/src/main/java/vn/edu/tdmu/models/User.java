@@ -31,7 +31,6 @@ public class User extends BaseEntity{
     @JsonView(Views.Summary.class)
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "user_id", nullable = false, unique = true)
     private Integer id;
 
     @JsonView(Views.Summary.class)
