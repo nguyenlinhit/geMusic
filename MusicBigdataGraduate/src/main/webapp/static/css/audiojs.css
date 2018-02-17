@@ -1,0 +1,70 @@
+.audiojs audio
+{
+  left:-1px;
+  position:absolute;
+}
+
+.audiojs
+{
+/*   background:#565353; */
+  font-size:12px;
+/*   height:30px; */
+  overflow:hidden;
+  width:20px;
+  border-radius: 15px;
+/*   margin: 15px 15px 15px 25px; */
+}
+
+.audiojs:hover
+{
+/*   background:#f04933; */
+  color: #f04933;
+}
+
+.audiojs .play-pause
+{
+  float:left;
+/*   height:30px; */
+  overflow:hidden;
+  width:25px;
+}
+
+.audiojs p
+{
+  cursor:pointer;
+  display:none;
+/*   height:30px; */
+  margin:0;
+  width:25px;
+}
+
+.audiojs .icon {
+  width: 25px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.audiojs .scrubber
+{
+  display:none;
+}
+
+.audiojs .time
+{
+  display:none;
+}
+
+.audiojs .error-message
+{
+  display:none;
+}
+
+.audiojs .play,.playing .pause,.loading .loading,.error .error/*,.error .error-message*/
+{
+  display:block;
+}
+
+.playing .play,.playing .loading,.playing .error,.loading .play,.loading .pause,.loading .error,.error .time,.error .play,.error .pause,.error .scrubber,.error .loading
+{
+  display:none;
+}

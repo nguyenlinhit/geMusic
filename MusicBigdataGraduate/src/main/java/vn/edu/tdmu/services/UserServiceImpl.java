@@ -22,15 +22,11 @@ import vn.edu.tdmu.repositories.UserRepository;
 @Service
 public class UserServiceImpl implements UserService{
     private static final Logger LOGGER = LoggerFactory.getLogger(UserServiceImpl.class);
-
-    private final UserRepository repository;
-    private final PasswordEncoder passwordEncoder;
-
     @Autowired
-    public UserServiceImpl(UserRepository repository, PasswordEncoder passwordEncoder) {
-        this.repository = repository;
-        this.passwordEncoder = passwordEncoder;
-    }
+    private  UserRepository repository;
+    @Autowired
+    private  PasswordEncoder passwordEncoder;
+
 
     @Override
     @Transactional(readOnly = true)

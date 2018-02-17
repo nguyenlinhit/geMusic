@@ -4,6 +4,106 @@
         "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 <tiles-definitions>
 
-    <definition name="test/*" template="/WEB-INF/views/test/{1}.jsp" />
+    <definition name="layout.main" template="/WEB-INF/views/shared/layout/_MainLayout.jsp">
+        <put-attribute name="header" value="/WEB-INF/views/shared/layout/_MainHeader.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/views/shared/layout/_MainFooter.jsp" />
+        <put-attribute name="bodyClass" value="" />
+        <put-attribute name="current" value="" cascade="true" />
+        <put-list-attribute name="stylesheets">
+            <add-attribute value="/static/css/bootstrap330.min.css" />
+            <add-attribute value="/static/font-awesome/css/font-awesome.css" />
+            <add-attribute value="/static/css/main.css" />
+            <add-attribute value="/static/css/responsive.css" />
+            <add-attribute value="/static/css/login-modal.css" />
+            <add-attribute value="/static/css/animate.css" />
+            <add-attribute value="/static/css/htfstyle.css" />
+        </put-list-attribute>
+        <put-list-attribute name="javascripts">
+            <add-attribute value="/static/js/scripts.js" />
+        </put-list-attribute>
+    </definition>
+
+    <definition name="home/index" extends="layout.main">
+        <put-attribute name="title" value="HomePage | FMusic" />
+        <put-attribute name="body" value="/WEB-INF/views/home/index.jsp" />
+        <put-attribute name="bodyClass" value="index" />
+        <put-attribute name="current" value="home" cascade="true" />
+        <put-list-attribute name="stylesheets" inherit="true">
+            <add-attribute value="/static/image-slider/css/image-slider.css" />
+        </put-list-attribute>
+        <put-list-attribute name="javascripts" inherit="true">
+            <add-attribute value="/static/js/jquery.flexslider.min.js" />
+            <add-attribute value="/static/image-slider/js/image-slider.js" />
+            <add-attribute value="/static/image-slider/js/jssor.slider.mini.js" />
+        </put-list-attribute>
+    </definition>
+
+    <definition name="song/index" extends="layout.main">
+        <put-attribute name="title" value="Songs | FMusic" />
+        <put-attribute name="body" value="/WEB-INF/views/song/index.jsp" />
+        <put-attribute name="current" value="song" cascade="true" />
+    </definition>
+
+    <definition name="song/details" extends="layout.main">
+        <put-attribute name="title" value="Song Details | FMusic" />
+        <put-attribute name="body" value="/WEB-INF/views/song/details.jsp" />
+        <put-list-attribute name="stylesheets" inherit="true">
+            <add-attribute value="/static/player/css/music-player.css" />
+        </put-list-attribute>
+        <put-list-attribute name="javascripts" inherit="true">
+            <add-attribute value="/static/player/js/libs/jquery.jplayer.js" />
+            <add-attribute value="/static/player/js/libs/ttw-music-player.js" />
+        </put-list-attribute>
+    </definition>
+
+    <definition name="playlist/index" extends="layout.main">
+        <put-attribute name="title" value="Albums | FMusic" />
+        <put-attribute name="body" value="/WEB-INF/views/playlist/index.jsp" />
+        <put-attribute name="current" value="album" cascade="true" />
+    </definition>
+
+    <definition name="playlist/details" extends="layout.main">
+        <put-attribute name="title" value="Playlist Details | FMusic" />
+        <put-attribute name="body" value="/WEB-INF/views/playlist/details.jsp" />
+        <put-list-attribute name="stylesheets" inherit="true">
+            <add-attribute value="/static/player/css/music-player.css" />
+        </put-list-attribute>
+        <put-list-attribute name="javascripts" inherit="true">
+            <add-attribute value="/static/player/js/libs/jquery.jplayer.js" />
+            <add-attribute value="/static/player/js/libs/ttw-music-player.js" />
+        </put-list-attribute>
+    </definition>
+
+    <definition name="user/index" extends="layout.main">
+        <put-attribute name="title" value="User Profile | FMusic" />
+        <put-attribute name="body" value="/WEB-INF/views/user/index.jsp" />
+        <put-attribute name="current" value="" cascade="true" />
+    </definition>
+
+    <definition name="upload/form" extends="layout.main">
+        <put-attribute name="title" value="Upload Song | FMusic" />
+        <put-attribute name="body" value="/WEB-INF/views/upload/form.jsp" />
+        <put-attribute name="current" value="" cascade="true" />
+        <put-list-attribute name="stylesheets" inherit="true">
+            <add-attribute value="/static/css/plugins/chosen/chosen.css" />
+        </put-list-attribute>
+        <put-list-attribute name="javascripts" inherit="true">
+            <add-attribute value="/static/js/plugins/chosen/chosen.jquery.js" />
+        </put-list-attribute>
+    </definition>
+
+    <definition name="upload/success" extends="layout.main">
+        <put-attribute name="title" value="Upload Successfully | FMusic" />
+        <put-attribute name="body" value="/WEB-INF/views/upload/success.jsp" />
+        <put-attribute name="current" value="" cascade="true" />
+    </definition>
+
+    <definition name="account/login" template="/WEB-INF/views/account/login.jsp" />
+    <definition name="account/register" template="/WEB-INF/views/account/register.jsp" />
+    <definition name="account/register_successful" template="/WEB-INF/views/account/register_successful.jsp" />
+    <definition name="account/forgot_password" template="/WEB-INF/views/account/forgot_password.jsp" />
+    <definition name="shared/_UserLinkPartial" template="/WEB-INF/views/shared/_UserLinkPartial.jsp" />
+    <definition name="shared/_LogoutFormPartial" template="/WEB-INF/views/shared/_LogoutFormPartial.jsp" />
+    <definition name="shared/401" template="/WEB-INF/views/shared/401.jsp" />
 
 </tiles-definitions>

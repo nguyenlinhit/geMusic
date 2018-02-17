@@ -29,23 +29,24 @@ import javax.sql.DataSource;
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
-    @Autowired
-    DataSource dataSource;
+    private final DataSource dataSource;
 
     @Autowired
     @Qualifier("customUserDetailsService")
-    UserDetailsService userDetailsService;
+    private UserDetailsService userDetailsService;
+
+    private final AjaxAuthenticationSuccessHandler ajaxLoginSuccessHandler;
+    private final AjaxAuthenticationFailureHandler ajaxLoginFailureHandler;
+    private final CustomLogoutSuccessHandler logoutSuccessHandler;
 
     @Autowired
-    AjaxAuthenticationSuccessHandler ajaxLoginSuccessHandler;
+    public SecurityConfiguration(@Qualifier("dataSource") DataSource dataSource, AjaxAuthenticationSuccessHandler ajaxLoginSuccessHandler, AjaxAuthenticationFailureHandler ajaxLoginFailureHandler, CustomLogoutSuccessHandler logoutSuccessHandler) {
+        this.dataSource = dataSource;
+        this.ajaxLoginSuccessHandler = ajaxLoginSuccessHandler;
+        this.ajaxLoginFailureHandler = ajaxLoginFailureHandler;
+        this.logoutSuccessHandler = logoutSuccessHandler;
+    }
 
-    @Autowired
-    AjaxAuthenticationFailureHandler ajaxLoginFailureHandler;
-    
-    @Autowired
-    CustomLogoutSuccessHandler logoutSuccessHandler;
-
-    
 
     @Autowired
     public void configureGlobalSecurity(AuthenticationManagerBuilder auth) throws Exception {

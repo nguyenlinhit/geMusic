@@ -1,0 +1,410 @@
+/*---------------------------------------
+	Less than 768px wide (Smartphones)
+---------------------------------------*/
+
+@media (max-width: 767px) {
+	body:before, body:after {
+		top: 130px;
+	}
+
+	#site-description {
+		display: none;
+	}
+
+	#top-links li.login a,
+	#top-links li.register a {
+		padding: 0 15px;	}
+
+	#top-links li.login a span,
+	#top-links li.register a span {
+		line-height: 0; 
+    	font-size: 0;
+	}
+
+	#top-links li.login a .fa,
+	#top-links li.register a .fa {
+		margin: 0;
+	}
+
+	.search-open .facebook,
+	.search-open .twitter,
+	.search-open .youtube,
+	.search-open .google-plus {
+		display: none;
+	}
+
+	#main-nav ul.nav > li {
+		height: 40px;
+		line-height: 40px;
+	}
+
+	#main-nav ul.nav > li.open {
+		height: auto;
+	}
+
+	#main-nav ul.nav li:before {
+		content: '';
+	}
+
+	#main-nav ul.nav li a {
+		padding: 0 15px;
+		height: 40px;
+		line-height: 40px;
+		margin: 0;
+		float: none;
+	}
+
+	.navbar-default .navbar-collapse {
+		border:none;
+		background: #2c2c2c;
+		box-shadow: 0px 0px 1px #202020;
+	}
+
+	.navbar > .container .navbar-brand {
+		line-height: 90px;
+		height:90px;
+		margin-left: 15px;
+	}
+
+	.navbar > .container .navbar-brand img {
+		height:50%;
+	}
+
+	.navbar-default .navbar-toggle {
+		border-color: #707070;
+		background-color: transparent;
+		margin:28px 15px 28px 0px;
+	}
+
+	.dropdown-menu li.divider {
+		background: #707070;
+	}
+
+	#main-nav .navbar-nav>.open>a, 
+	#main-nav .navbar-nav>.open>a:hover, 
+	#main-nav .navbar-nav>.open>a:focus {
+		background: #707070;
+		color:#373737;
+	}
+
+	#main-nav .navbar-nav>.dropdown>a .caret {
+		border-top-color:#474747;
+		border-bottom-color:#474747;
+	}
+
+	#main-nav .navbar-nav>.open>a .caret, 
+	#main-nav .navbar-nav>.open>a:hover .caret, 
+	#main-nav .navbar-nav>.open>a:focus .caret {
+		color:#474747;
+	}
+
+	#main-nav .navbar-nav > .dropdown li a {
+		padding-left: 35px;
+	}
+
+	#breadcrumbs {
+		height:110px;
+		line-height: 110px;
+	}
+
+	#banner .flexslider { height:500px; }
+	.slides li h1 {
+		font-size: 36px;
+		margin-bottom: 5%;
+	}
+
+	.slides li p {
+		font-size: 18px;
+	}
+
+	footer .footer-col {
+		background: none;
+	}
+
+	.love {
+		display: none;
+	}
+
+	.copyright {
+		text-align: center;
+		padding-bottom: 20px;
+	}
+
+	footer ul.social {
+		float:none;
+		margin: 0 auto;
+		overflow: hidden;
+		display: table;
+	}
+
+	.view-all {
+		width:25px;
+	}
+
+	.view-all-icon {
+		margin-left:0;
+	}
+
+	.view-all span {
+		line-height: 0; 
+    	font-size: 0;
+	}
+
+	h2 span.view {
+		display: none;
+	}
+
+	#gmap {
+		height:360px;
+	}
+
+	.map-container .info {
+		padding: 15px 20px;
+		line-height: 24px;
+		min-width: 170px;
+		left:30%;
+		top:60%;
+		height:100px;
+	}
+
+	.map-container .info p {
+		font-size: 13px;
+	}
+
+	.map-container .info .arrow {
+		left:40%;
+		top:-25px;
+		border-top: 13px solid transparent;
+		border-bottom: 13px solid #f04933;
+	}
+
+	.flex-direction-nav {left:20px; bottom: 10px;}
+	.event-gallery {
+		max-height: 240px;
+	}
+
+	.event-info dl dt {
+		float: left;
+	}
+
+	.event-info .action-buttons a {
+	height:40px;
+	width: 110px;
+	line-height: 40px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	font-size: 20px;
+	}
+
+	.isotope-filters {
+		display: table;
+	}
+
+	.isotope-filters li {
+		float: none;
+		text-align: center;
+	}
+
+	.isotope-filters li .fa {
+		display: none;
+	}
+
+	.album-banner .banner-image {
+		height:240px;
+	}
+
+	.album-btns {
+		padding:20px 30px 0 45px;
+	}
+
+	.widget .tabs li a {
+		height:35px;
+		line-height:35px;
+		font-size:16px;
+		padding: 0 15px;
+	}
+
+	.post .post-image {
+		height: 200px;
+	}
+
+	a.next, a.prev {
+		display: none;
+	}
+}
+
+/*------------------------------------
+	Less than 970px wide (Tablets)
+------------------------------------*/
+
+@media (min-width: 768px) and (max-width: 991px) {
+	#site-description {
+		width:200px;
+	}
+
+	body:before, body:after {
+		top: 130px;
+	}
+
+	.search-open .facebook,
+	.search-open .twitter,
+	.search-open .youtube,
+	.search-open .google-plus {
+		display: none;
+	}
+
+	.navbar-default .navbar-toggle {
+		border-color: #707070;
+		background-color: transparent;
+		margin:28px 15px 28px 0px;
+	}
+
+	.navbar > .container .navbar-brand {
+		line-height: 90px;
+		height:90px;
+	}
+
+	.navbar > .container .navbar-brand img {
+		height:50%;
+	}
+
+	ul.nav > li {
+		height: 90px;
+		line-height: 90px;
+	}
+
+	#main-nav ul.nav li a {
+		font-size: 13px;
+		height: 30px;
+		line-height: 30px;
+		margin: 15px 0;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	#main-nav ul.nav > li:before {
+		height: 30px;
+		line-height: 30px;
+		margin: 30px 0;
+	}
+
+	#banner .flexslider { height:500px; }
+	.slides li h1 {
+		font-size: 48px;
+	}
+
+	footer .footer-col:nth-child(2n) {
+		background: none;
+	}
+
+	.love {
+		display: none;
+	}
+
+	#gmap {
+		height:360px;
+	}
+
+	.map-container .info {
+		padding: 30px 20px;
+	}
+
+	.map-container .info p {
+		font-size: 14px;
+	}
+
+	.event-gallery {
+		max-height: 360px;
+	}
+
+	.album-banner .banner-image {
+		height:360px;
+	}
+
+	.widget .tabs li a {
+		height:30px;
+		line-height:30px;
+		font-size:14px;
+		padding: 0 10px;
+	}
+
+	.post .post-image {
+		height: 270px;
+	}
+}
+
+/*------------------------------------
+	Upto 990px wide (Mobile)
+------------------------------------*/
+
+@media (max-width: 991px) {
+	ul.share {
+		left:15px; 
+		top: -40px; 
+	}
+
+	ul.share li {
+		margin-right: 5px;
+		margin-bottom: 0;
+		float: left;
+	}
+
+	.songs li .track-btns {
+		clear:both;
+	}
+}
+
+/*------------------------------------
+	More than 768px wide (Tablets+)
+------------------------------------*/
+
+@media (min-width: 768px) {
+	ul.nav li.dropdown:hover > ul.dropdown-menu { 	/* Make dropdown work on hover */
+    	display: block;    
+	}
+}
+
+/*-------------------------------------------------
+	Smaller than 1200px wide (Small desktops max)
+-------------------------------------------------*/
+
+@media (max-width: 1199px) {
+	main h2 {
+		font-size: 25px;
+	}
+}
+
+/*-------------------------------------------------
+	990px - 1200px (Small desktops only)
+-------------------------------------------------*/
+
+@media (min-width: 991px) and (max-width: 1199px) {
+	#gmap {
+		height:420px;
+	}
+
+	.map-container .info {
+		padding: 40px 20px;
+	}
+
+	.map-container .info p {
+		font-size: 18px;
+	}
+
+	.widget .tabs li a {
+		height:35px;
+		line-height:35px;
+		font-size:16px;
+		padding: 0 15px;
+	}
+}
+
+/*------------------------------------------
+	Devices smaller than width of wrapper
+------------------------------------------*/
+
+@media (max-width: 1370px) {
+  #features, #events, #latest-content, #tagline, #content, footer {
+    width:100%;
+  }
+}

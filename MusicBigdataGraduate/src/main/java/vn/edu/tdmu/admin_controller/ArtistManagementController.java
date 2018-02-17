@@ -37,8 +37,7 @@ public class ArtistManagementController {
     private final String DIRECTORY;
 
     private final ArtistService artistService;
-    final
-    MessageSource messageSource;
+    private final MessageSource messageSource;
     @Autowired
     public ArtistManagementController(ArtistService artistService, MessageSource messageSource, ServletContext servletContext) {
         LOGGER.info("Inside constructor of ArtistManagementController.");
@@ -127,7 +126,7 @@ public class ArtistManagementController {
         return "redirect:list";
     }
     //Update a Artist
-    @RequestMapping(value = "edit-{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/edit-{id}", method = RequestMethod.GET)
     public String editArtist(@PathVariable Integer id, Model model){
         Artist artist = artistService.findById(id);
         model.addAttribute("artist",artist);
@@ -135,7 +134,7 @@ public class ArtistManagementController {
         return "admin/artist/edit_dpk";
     }
 
-    @RequestMapping(value = "/edit-{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/edit-{id}", method = RequestMethod.POST)
     public String update(@Valid @ModelAttribute Artist artist, BindingResult result, @PathVariable Integer id, @RequestParam String save, Model model,
                          RedirectAttributes redirectAttributes){
         if (!artistService.isArtistNameUnique(artist.getId(), artist.getName())){

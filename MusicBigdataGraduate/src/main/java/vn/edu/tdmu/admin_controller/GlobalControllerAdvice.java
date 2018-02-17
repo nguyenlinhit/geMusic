@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import vn.edu.tdmu.models.User;
@@ -17,16 +18,13 @@ import vn.edu.tdmu.services.UserService;
  *
  */
 @ControllerAdvice
+@Component
 public class GlobalControllerAdvice {
     private static final Logger LOGGER = LoggerFactory.getLogger(GlobalControllerAdvice.class);
 
-    private final UserService userService;
-
     @Autowired
-    GlobalControllerAdvice(UserService userService) {
-        LOGGER.debug("Inside GlobalControllerAdvice constructor.");
-        this.userService = userService;
-    }
+    private UserService userService;
+
 
     @ModelAttribute("loginModel")
     public User loginModel() {

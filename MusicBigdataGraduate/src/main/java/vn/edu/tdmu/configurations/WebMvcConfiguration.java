@@ -64,7 +64,6 @@ public class WebMvcConfiguration extends WebMvcConfigurerAdapter{
         tilesConfigurer.setDefinitions("WEB-INF/titles/defs/general.xml", "WEB-INF/titles/defs/admin.xml", "WEB-INF/titles/defs/test.xml");
         return tilesConfigurer;
     }
-
     @Override
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
         super.configureDefaultServletHandling(configurer);

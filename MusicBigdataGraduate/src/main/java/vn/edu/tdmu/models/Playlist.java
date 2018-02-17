@@ -263,4 +263,6 @@ public class Playlist extends BaseEntity{
         Playlist other = (Playlist) obj;
         return !((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id)));
     }
+
+
 }

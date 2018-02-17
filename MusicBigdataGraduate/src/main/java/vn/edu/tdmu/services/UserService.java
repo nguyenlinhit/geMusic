@@ -8,17 +8,17 @@ import vn.edu.tdmu.models.User;
  *
  */
 public interface UserService extends BaseService<User, Integer>{
-    public User findByUsername(String username);
+    User findByUsername(String username);
 
-    public User update(User updatedEntry);
+    User update(User updatedEntry);
 
-    public User updateAvatar(Integer id, String newImageUrl);
+    User updateAvatar(Integer id, String newImageUrl);
 
-    public User updatePassword(Integer id, String newPassword);
+    User updatePassword(Integer id, String newPassword);
 
-    public boolean isUsernameUnique(Integer id, String username);
+    boolean isUsernameUnique(Integer id, String username);
 
-    public boolean isEmailUnique(Integer id, String email);
+    boolean isEmailUnique(Integer id, String email);
 
-    public boolean addPlaylistToUser(String username, Playlist playlist);
+    boolean addPlaylistToUser(String username, Playlist playlist);
 }
