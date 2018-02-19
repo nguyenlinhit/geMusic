@@ -25,25 +25,26 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
  public abstract class BaseEntity implements Serializable{
      protected static final long serialVersionUID = 1L;
 
-     @Column(name = "created_by_user", nullable = true)
+     @Column(name = "created_by_user")
      @CreatedBy
      private String createdByUser;
 
-     @Column(name = "modified_by_user", nullable = true)
+     @Column(name = "modified_by_user")
      @LastModifiedBy
      private String modifiedByUser;
 
      @CreatedDate
      @Temporal(TemporalType.TIMESTAMP)
-     protected Date creationTime;
+     @Column(name = "creation_time")
+     private Date creationTime;
 
-     @LastModifiedDate
-     @Temporal(TemporalType.TIMESTAMP)
-     @Column(name = "modification_time")
-     protected Date modificationTime;
+    @LastModifiedDate
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "modification_time")
+    private Date modificationTime;
 
-     @Version
-     @Column(nullable = true, insertable = false, columnDefinition = "INT DEFAULT 0")
+    @Version
+     @Column(insertable = false, columnDefinition = "INT DEFAULT 0")
      protected Integer version;
 
      public String getCreateByUser(){
@@ -58,7 +59,42 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
          return this.creationTime;
      }
 
-     public Date getModificationTime(){
-         return this.getModificationTime();
-     }
- }
+    BaseEntity() {
+    }
+
+    public String getCreatedByUser() {
+        return createdByUser;
+    }
+
+    public void setCreatedByUser(String createdByUser) {
+        this.createdByUser = createdByUser;
+    }
+
+    public void setModifiedByUser(String modifiedByUser) {
+        this.modifiedByUser = modifiedByUser;
+    }
+
+    public Date getCreationTime() {
+        return creationTime;
+    }
+
+    public void setCreationTime(Date creationTime) {
+        this.creationTime = creationTime;
+    }
+
+    public Integer getVersion() {
+        return version;
+    }
+
+    public void setVersion(Integer version) {
+        this.version = version;
+    }
+
+    public Date getModificationTime() {
+        return modificationTime;
+    }
+
+    public void setModificationTime(Date modificationTime) {
+        this.modificationTime = modificationTime;
+    }
+}

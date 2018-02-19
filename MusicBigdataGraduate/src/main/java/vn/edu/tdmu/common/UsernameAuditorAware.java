@@ -6,7 +6,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.AuditorAware;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
 
 /**
  * @author NguyenLinh
@@ -19,24 +18,18 @@ public class UsernameAuditorAware implements AuditorAware<String>{
 	@Override
 	public String getCurrentAuditor() {
 
-        LOGGER.debug("Getting the user of authenticated user.");
-
+        LOGGER.info("Getting the username of authenticated user.");
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 
-        if (authentication == null || !authentication.isAuthenticated()){
-            LOGGER.debug("Current user is anonymus. Returning null.");
+        if (authentication == null || !authentication.isAuthenticated()) {
+            LOGGER.info("Current user is anonymous. Returning null.");
+            return null;
         }
 
-        Object principal = authentication.getPrincipal();
+        String username = authentication.getName();
+        LOGGER.info("Returning username: {}", username);
 
-        if (principal instanceof UserDetails){
-            String username = ((org.springframework.security.core.userdetails.User) authentication.getPrincipal()).getUsername();
-
-            LOGGER.debug("Returning username: {}", username);
-            return username;
-        }
-
-		return null;
+        return username;
 	}
 
 }

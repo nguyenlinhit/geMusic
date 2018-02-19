@@ -11,7 +11,6 @@
 <security:authorize access="isAuthenticated()">
     <li class="show_user_box dropdown">
         <a href="#" data-toggle="dropdown" class="link_user">
-            <jsp:useBean id="loginModel" scope="request" type="vn.edu.tdmu.models.Playlist"/>
             <c:if test="${not empty loginModel.imageUrl}">
                 <img class="avt" src="<c:url value="${loginModel.imageUrl}" />">
             </c:if>

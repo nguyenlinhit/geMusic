@@ -227,6 +227,7 @@ public class SongServiceImpl implements SongService{
 
         LOGGER.info("Found song entry: {}", songEntry);
         LOGGER.info("Increments Views of song entrie: {}", songEntry);
+        assert songEntry != null;
         songEntry.incrementViews();
         repository.flush();
 

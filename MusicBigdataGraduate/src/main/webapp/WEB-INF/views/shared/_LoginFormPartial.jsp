@@ -8,17 +8,16 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <%@include file="taglib.jsp"%>
 <!-- BEGIN # MODAL LOGIN -->
-<!-- BEGIN # MODAL LOGIN -->
 <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header" align="center">
                 <img id="img_logo" src="<c:url value="/static/img/logo.png"/>">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                </button>
-            </div>
-            <!-- Begin # DIV Form -->
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+            </button>
+        </div>
+        <!-- Begin # DIV Form -->
             <div id="div-forms">
                 <!-- Begin # Login Form -->
                 <%--action url for login: <c:url var="loginUrl" value="/login/submit" /> --%>

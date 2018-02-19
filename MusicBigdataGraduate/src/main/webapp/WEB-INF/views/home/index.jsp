@@ -92,7 +92,7 @@
                                                     </a>
                                                 </p>
                                             </div>
-                                            <span class="views"><i class="fa fa-headphones"></i> <fmt:formatNumber type="number" value="${song.totalViews}" /></span>
+                                            <span class="views"><i class="fa fa-headphones"></i> <fmt:formatNumber type="number" value="${song.totalView}" /></span>
                                             <span class="audiojs">
 											      <a class="error"><i class="fa fa-plus icon"></i></a>
 											      <a class="play"><i class="fa fa-play icon"></i></a>
@@ -121,7 +121,7 @@
                                                     </a>
                                                 </p>
                                             </div>
-                                            <span class="views"><i class="fa fa-headphones"></i> <fmt:formatNumber type="number" value="${song.totalViews}" /></span>
+                                            <span class="views"><i class="fa fa-headphones"></i> <fmt:formatNumber type="number" value="${song.totalView}" /></span>
                                             <span class="audiojs">
 											      <a class="error"><i class="fa fa-plus icon"></i></a>
 											      <a class="play"><i class="fa fa-play icon"></i></a>
@@ -179,7 +179,7 @@
                                             </h4>
                                             <span class="author" style="font-size:12px">
 												<i class="fa fa-headphones" style="opacity:0.6"></i>
-												<fmt:formatNumber type="number" value="${sp.song.totalViews}" />
+												<fmt:formatNumber type="number" value="${sp.song.totalView}" />
 											</span>
                                         </div>
                                     </div>
@@ -214,7 +214,7 @@
                                             </div>
                                             <span class="views" style="float:right">
 												<i class="fa fa-headphones" style="opacity:0.6"></i>
-												<fmt:formatNumber type="number" value="${sp.song.totalViews}" />
+												<fmt:formatNumber type="number" value="${sp.song.totalView}" />
 											</span>
                                         </li>
                                     </c:forEach>
@@ -248,7 +248,7 @@
                                             </h4>
                                             <span class="author" style="font-size:12px">
 												<i class="fa fa-headphones" style="opacity:0.6"></i>
-												<fmt:formatNumber type="number" value="${sp.song.totalViews}" />
+												<fmt:formatNumber type="number" value="${sp.song.totalView}" />
 											</span>
                                         </div>
                                     </div>
@@ -283,7 +283,7 @@
                                             </div>
                                             <span class="views" style="float:right">
 												<i class="fa fa-headphones" style="opacity:0.6"></i>
-												<fmt:formatNumber type="number" value="${sp.song.totalViews}" />
+												<fmt:formatNumber type="number" value="${sp.song.totalView}" />
 											</span>
                                         </li>
                                     </c:forEach>
@@ -317,7 +317,7 @@
                                             </h4>
                                             <span class="author" style="font-size:12px">
 												<i class="fa fa-headphones" style="opacity:0.6"></i>
-												<fmt:formatNumber type="number" value="${sp.song.totalViews}" />
+												<fmt:formatNumber type="number" value="${sp.song.totalView}" />
 											</span>
                                         </div>
                                     </div>
@@ -352,7 +352,7 @@
                                             </div>
                                             <span class="views" style="float:right">
 												<i class="fa fa-headphones" style="opacity:0.6"></i>
-												<fmt:formatNumber type="number" value="${sp.song.totalViews}" />
+												<fmt:formatNumber type="number" value="${sp.song.totalView}" />
 											</span>
                                         </li>
                                     </c:forEach>

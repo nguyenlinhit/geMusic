@@ -1,6 +1,7 @@
 package vn.edu.tdmu.models;
 
 import com.fasterxml.jackson.annotation.JsonView;
+import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -190,5 +191,13 @@ public class Artist extends BaseEntity{
 
         Artist other = (Artist) obj;
         return !((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id)));
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this)
+                .append("id", this.id)
+                .append("name", this.name)
+                .toString();
     }
 }

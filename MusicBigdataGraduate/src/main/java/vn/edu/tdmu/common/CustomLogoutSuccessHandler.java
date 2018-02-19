@@ -37,6 +37,7 @@ public class CustomLogoutSuccessHandler implements LogoutSuccessHandler {
     @Override
     public void onLogoutSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication)
             throws IOException, ServletException {
+        LOGGER.info("Inside CustomLogoutSuccessHandler Constructor");
         String referrer = request.getHeader("referer");
 
         if (requiresAuthentication("/admin", authentication)) {

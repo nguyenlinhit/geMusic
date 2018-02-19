@@ -93,6 +93,7 @@ public class RoleServiceImpl implements RoleService{
         LOGGER.info("Creating a new role entry by using information: {}", newEntry);
 
         Role created = this.repository.save(newEntry);
+        LOGGER.debug(created.getType());
         LOGGER.info("Created a new role entry: {}", created);
 
         return created;

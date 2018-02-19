@@ -1,5 +1,6 @@
 package vn.edu.tdmu.models;
 
+import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
@@ -8,7 +9,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Created by nguye on 1/26/2018.
+ * Created by NguyenLinh on 1/26/2018.
  *
  */
 @Entity
@@ -94,5 +95,14 @@ public class Role extends BaseEntity{
 
         Role other = (Role) obj;
         return !((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id)));
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this)
+                .append("id", this.id)
+                .append("type", this.type)
+                .append("description", this.description)
+                .toString();
     }
 }

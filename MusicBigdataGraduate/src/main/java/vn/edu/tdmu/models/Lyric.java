@@ -1,5 +1,6 @@
 package vn.edu.tdmu.models;
 
+import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
@@ -92,5 +93,14 @@ public class Lyric extends BaseEntity{
 
         Lyric other = (Lyric) obj;
         return !((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id)));
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this)
+                .append("id", this.id)
+                .append("title", this.title)
+                .append("body_txt", this.body)
+                .toString();
     }
 }

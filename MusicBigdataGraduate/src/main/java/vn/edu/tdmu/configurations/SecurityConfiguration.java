@@ -64,8 +64,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .and().formLogin().loginPage("/login").successHandler(ajaxLoginSuccessHandler).failureHandler(ajaxLoginFailureHandler).permitAll()
                 .and().rememberMe().tokenRepository(persistentTokenRepository()).tokenValiditySeconds(864000)
                 .and().logout().deleteCookies("JSESSIONID").logoutSuccessHandler(logoutSuccessHandler)
-                .and().csrf()
-                .and().exceptionHandling().accessDeniedPage("/access_denied");
+                .and().exceptionHandling().accessDeniedPage("/access_denied")
+                .and().csrf();
     }
 
     @Bean

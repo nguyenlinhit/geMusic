@@ -1,0 +1,83 @@
+{
+  "properties": [
+    {
+      "name": "hibernate.ejb.naming_strategy",
+      "type": "java.lang.String",
+      "description": "Description for hibernate.ejb.naming_strategy."
+    },
+    {
+      "name": "hibernate.show_sql",
+      "type": "java.lang.String",
+      "description": "Description for hibernate.show_sql."
+    },
+    {
+      "name": "hibernate.format_sql",
+      "type": "java.lang.String",
+      "description": "Description for hibernate.format_sql."
+    },
+    {
+      "name": "hibernate.hbm2ddl.auto",
+      "type": "java.lang.String",
+      "description": "Description for hibernate.hbm2ddl.auto."
+    },
+    {
+      "name": "hibernate.dialect",
+      "type": "java.lang.String",
+      "description": "Description for hibernate.dialect."
+    },
+    {
+      "name": "db.password",
+      "type": "java.lang.String",
+      "description": "Description for db.password."
+    },
+    {
+      "name": "db.username",
+      "type": "java.lang.String",
+      "description": "Description for db.username."
+    },
+    {
+      "name": "serverLink.currentHost",
+      "type": "java.lang.String",
+      "description": "Description for serverLink.currentHost."
+    },
+    {
+      "name": "db.url",
+      "type": "java.lang.String",
+      "description": "Description for db.url."
+    },
+    {
+      "name": "db.driver",
+      "type": "java.lang.String",
+      "description": "Description for db.driver."
+    },
+    {
+      "name": "smtp.host",
+      "type": "java.lang.String",
+      "description": "Description for smtp.host."
+    },
+    {
+      "name": "smtp.port",
+      "type": "java.lang.String",
+      "description": "Description for smtp.port."
+    },
+    {
+      "name": "smtp.protocol",
+      "type": "java.lang.String",
+      "description": "Description for smtp.protocol."
+    },
+    {
+      "name": "smtp.username",
+      "type": "java.lang.String",
+      "description": "Description for smtp.username."
+    },
+    {
+      "name": "smtp.password",
+      "type": "java.lang.String",
+      "description": "Description for smtp.password."
+    },
+    {
+      "name": "support.email",
+      "type": "java.lang.String",
+      "description": "Description for support.email."
+    }
+  ] }

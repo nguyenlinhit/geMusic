@@ -6,7 +6,7 @@ import com.fasterxml.jackson.databind.MapperFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 import com.fasterxml.jackson.databind.SerializationFeature;
-import com.fasterxml.jackson.datatype.hibernate4.Hibernate4Module;
+import com.fasterxml.jackson.datatype.hibernate5.Hibernate5Module;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,6 +41,7 @@ public class PlaylistController {
 
     @Autowired
     public PlaylistController(GenreService genreService, PlaylistService playlistService, SongPlaylistService songPlaylistService, SongService songService, UserService userService) {
+        LOGGER.info("Inside PlaylistController constructor");
         this.genreService = genreService;
         this.playlistService = playlistService;
         this.songPlaylistService = songPlaylistService;
@@ -112,7 +113,7 @@ public class PlaylistController {
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.disable(SerializationFeature.WRITE_DATE_KEYS_AS_TIMESTAMPS);
         objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
-        objectMapper.registerModule(new Hibernate4Module());
+        objectMapper.registerModule(new Hibernate5Module());
         objectMapper.configure(MapperFeature.DEFAULT_VIEW_INCLUSION, false);
 
         ObjectWriter ow = objectMapper.writer().withDefaultPrettyPrinter();

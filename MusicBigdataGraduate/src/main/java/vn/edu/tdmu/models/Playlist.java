@@ -37,7 +37,7 @@ public class Playlist extends BaseEntity{
 
     @JsonView(Views.Summary.class)
     @Column(name = "week_views")
-    private Integer weekViews;
+    private Integer weekViews = 0;
 
     @JsonView(Views.Summary.class)
     @Column(name = "country")

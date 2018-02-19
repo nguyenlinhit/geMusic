@@ -14,12 +14,12 @@
 	width: 55px;
 	height: 55px;
 	cursor: pointer;
-	background: url('img/a02.png') no-repeat;
+	background: url('../../img/a02.png') no-repeat;
 	overflow: hidden;
 }
 .jssora02l { background-position: -3px -33px; }
 .jssora02r { background-position: -63px -33px; }
-.jssora02l:hover { background-position: -123px -33px; }
+.jssora02l:hover { background-position: -123px -33p	x; }
 .jssora02r:hover { background-position: -183px -33px; }
 .jssora02l.jssora02ldn { background-position: -3px -33px; }
 .jssora02r.jssora02rdn { background-position: -63px -33px; }
