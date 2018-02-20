@@ -23,7 +23,7 @@
 
     <!-- Admin Dashboard -->
     <definition name="admin/dashboard/index" extends="layout.admin">
-        <put-attribute name="title" value="Dashboard | FMusic Administration" />
+        <put-attribute name="title" value="Dashboard | GEMusic Administration" />
         <put-attribute name="body" value="/WEB-INF/views/admin/dashboard/index.jsp" />
         <put-attribute name="current" value="dashboard" cascade="true" />
         <put-list-attribute name="stylesheets" inherit="true">
@@ -38,7 +38,7 @@
 
     <!-- Admin Mailbox -->
     <definition name="admin/mail/index" extends="layout.admin">
-        <put-attribute name="title" value="Mailbox | FMusic Administration" />
+        <put-attribute name="title" value="Mailbox | GEMusic Administration" />
         <put-attribute name="body" value="/WEB-INF/views/admin/mail/index.jsp" />
         <put-attribute name="current" value="mail" cascade="true" />
     </definition>

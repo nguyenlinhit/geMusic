@@ -59,7 +59,7 @@ public class UserManagementController {
     public String listUsers(Model model) {
         List<User> users = userService.findAll();
         model.addAttribute("users", users);
-        model.addAttribute("title", "Manage Users | FMusic Administration");
+        model.addAttribute("title", "Manage Users | GEMusic Administration");
         return "admin/user/list";
     }
 
@@ -68,7 +68,7 @@ public class UserManagementController {
     public String details(@PathVariable Integer id, Model model) {
         User user = userService.findById(id);
         model.addAttribute("user", user);
-        model.addAttribute("title", "User Details | FMusic Administration");
+        model.addAttribute("title", "User Details | GEMusic Administration");
         return "admin/user/details";
     }
 
@@ -77,7 +77,7 @@ public class UserManagementController {
     public String newUser(Model model) {
         User user = new User();
         model.addAttribute("user", user);
-        model.addAttribute("title", "Add a new User | FMusic Administration");
+        model.addAttribute("title", "Add a new User | GEMusic Administration");
         return "admin/user/create_dpk";
     }
 
@@ -128,7 +128,7 @@ public class UserManagementController {
     public String editUser(@PathVariable Integer id, Model model) {
         User user = userService.findById(id);
         model.addAttribute("user", user);
-        model.addAttribute("title", "Edit User details | FMusic Administration");
+        model.addAttribute("title", "Edit User details | GEMusic Administration");
         return "admin/user/edit_dpk";
     }
 

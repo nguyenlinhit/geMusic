@@ -78,7 +78,7 @@
             </li>
 
             <li class="landing_link">
-                <a target="_blank" href='<spring:url value="/" />'><i class="fa fa-play"></i><span class="nav-label">Landing FMusic</span></a>
+                <a target="_blank" href='<spring:url value="/" />'><i class="fa fa-play"></i><span class="nav-label">Landing GEMusic</span></a>
             </li>
 
         </ul>

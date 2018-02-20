@@ -170,9 +170,9 @@
 
 <script>
     $(document).ready(function() {
-        <!-- data -->
+        //data 
         var data = ${songs};
-        <!-- create playlist -->
+        //create playlist
         var myPlaylist = [];
         $(data).each(function(i, sp) {
             var artists = "";
@@ -186,14 +186,14 @@
                 }
             }
             myPlaylist.push({
-                mp3: '/fmusic'+sp.song.url,
+                mp3: '/GEMusic'+sp.song.url,
                 title: sp.song.name + ' - ' + artists,
                 buy: '',
                 price: "<a href='#' target='_blank' title='Download'><i class='fa fa-download'></i></a> <a href='#' target='_blank' title='Add'><i class='fa fa-plus'></i></a> <a href='#' target='_blank' title='Share'><i class='fa fa-share-alt'></i></a>  <a href='#' target='_blank' title='Go to...'><i class='fa fa-arrow-right'></i></a>",
             });
         });
 
-        <!-- player -->
+        //player
         $('.player_area').ttwMusicPlayer(myPlaylist, {
             autoplay: true,
             tracksToShow: 7,
@@ -202,7 +202,7 @@
             }
         });
 
-        <!-- add button -->
+        //add button
         $("#btnAddPlaylist").click(function(e) {
             e.preventDefault();
             $.get("${addPlaylistUrl}", {

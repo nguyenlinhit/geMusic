@@ -39,13 +39,13 @@
     </definition>
 
     <definition name="song/index" extends="layout.main">
-        <put-attribute name="title" value="Songs | FMusic" />
+        <put-attribute name="title" value="Songs | GEMusic" />
         <put-attribute name="body" value="/WEB-INF/views/song/index.jsp" />
         <put-attribute name="current" value="song" cascade="true" />
     </definition>
 
     <definition name="song/details" extends="layout.main">
-        <put-attribute name="title" value="Song Details | FMusic" />
+        <put-attribute name="title" value="Song Details | GEMusic" />
         <put-attribute name="body" value="/WEB-INF/views/song/details.jsp" />
         <put-list-attribute name="stylesheets" inherit="true">
             <add-attribute value="/static/player/css/music-player.css" />
@@ -57,13 +57,13 @@
     </definition>
 
     <definition name="playlist/index" extends="layout.main">
-        <put-attribute name="title" value="Albums | FMusic" />
+        <put-attribute name="title" value="Albums | GEMusic" />
         <put-attribute name="body" value="/WEB-INF/views/playlist/index.jsp" />
         <put-attribute name="current" value="album" cascade="true" />
     </definition>
 
     <definition name="playlist/details" extends="layout.main">
-        <put-attribute name="title" value="Playlist Details | FMusic" />
+        <put-attribute name="title" value="Playlist Details | GEMusic" />
         <put-attribute name="body" value="/WEB-INF/views/playlist/details.jsp" />
         <put-list-attribute name="stylesheets" inherit="true">
             <add-attribute value="/static/player/css/music-player.css" />
@@ -75,13 +75,13 @@
     </definition>
 
     <definition name="user/index" extends="layout.main">
-        <put-attribute name="title" value="User Profile | FMusic" />
+        <put-attribute name="title" value="User Profile | GEMusic" />
         <put-attribute name="body" value="/WEB-INF/views/user/index.jsp" />
         <put-attribute name="current" value="" cascade="true" />
     </definition>
 
     <definition name="upload/form" extends="layout.main">
-        <put-attribute name="title" value="Upload Song | FMusic" />
+        <put-attribute name="title" value="Upload Song | GEMusic" />
         <put-attribute name="body" value="/WEB-INF/views/upload/form.jsp" />
         <put-attribute name="current" value="" cascade="true" />
         <put-list-attribute name="stylesheets" inherit="true">
@@ -93,7 +93,7 @@
     </definition>
 
     <definition name="upload/success" extends="layout.main">
-        <put-attribute name="title" value="Upload Successfully | FMusic" />
+        <put-attribute name="title" value="Upload Successfully | GEMusic" />
         <put-attribute name="body" value="/WEB-INF/views/upload/success.jsp" />
         <put-attribute name="current" value="" cascade="true" />
     </definition>

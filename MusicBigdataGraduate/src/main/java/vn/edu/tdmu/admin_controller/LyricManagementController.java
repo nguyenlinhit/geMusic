@@ -36,7 +36,7 @@ public class LyricManagementController {
     public String listLyrics(Model model) {
         List<Lyric> lyrics = lyricService.findAll();
         model.addAttribute("lyrics", lyrics);
-        model.addAttribute("title", "Manage Lyrics | FMusic Administration");
+        model.addAttribute("title", "Manage Lyrics | GEMusic Administration");
         return "admin/lyric/list";
     }
 
@@ -45,7 +45,7 @@ public class LyricManagementController {
     public String details(@PathVariable Integer id, Model model) {
         Lyric lyric = lyricService.findById(id);
         model.addAttribute("lyric", lyric);
-        model.addAttribute("title", "Lyric Details | FMusic Administration");
+        model.addAttribute("title", "Lyric Details | GEMusic Administration");
         return "admin/lyric/details";
     }
 
@@ -54,7 +54,7 @@ public class LyricManagementController {
     public String newLyric(Model model) {
         Lyric lyric = new Lyric();
         model.addAttribute("lyric", lyric);
-        model.addAttribute("title", "Add a new Lyric | FMusic Administration");
+        model.addAttribute("title", "Add a new Lyric | GEMusic Administration");
         return "admin/lyric/create";
     }
 
@@ -80,7 +80,7 @@ public class LyricManagementController {
     public String editLyric(@PathVariable Integer id, Model model) {
         Lyric lyric = lyricService.findById(id);
         model.addAttribute("lyric", lyric);
-        model.addAttribute("title", "Edit Lyric details | FMusic Administration");
+        model.addAttribute("title", "Edit Lyric details | GEMusic Administration");
         return "admin/lyric/edit";
     }
 

@@ -113,8 +113,9 @@ public class InitDbService {
                 Song s = new Song();
                 s.setName("Generated song " + i);
                 s.setUrl("/static/data/mp3/Runaway - Ed Sheeran.mp3");
-                //s.addArtist(artist);
+                s.addArtist(artist);
                 s.setPublished(true);
+                s.setWeekViews(0);
                 if (i < 50) {
                     s.setGenre(popG);
                 } else if (i < 60) {

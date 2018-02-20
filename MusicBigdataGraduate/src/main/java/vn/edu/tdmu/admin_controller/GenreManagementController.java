@@ -42,7 +42,7 @@ public class GenreManagementController {
     public String listGenres(Model model) {
         List<Genre> genres = genreService.findAll();
         model.addAttribute("genres", genres);
-        model.addAttribute("title", "Manage Genres | FMusic Administration");
+        model.addAttribute("title", "Manage Genres | GEMusic Administration");
         return "admin/genre/list";
     }
 
@@ -51,7 +51,7 @@ public class GenreManagementController {
     public String details(@PathVariable Integer id, Model model) {
         Genre genre = genreService.findById(id);
         model.addAttribute("genre", genre);
-        model.addAttribute("title", "Genre Details | FMusic Administration");
+        model.addAttribute("title", "Genre Details | GEMusic Administration");
         return "admin/genre/details";
     }
 
@@ -60,7 +60,7 @@ public class GenreManagementController {
     public String newGenre(Model model) {
         Genre genre = new Genre();
         model.addAttribute("genre", genre);
-        model.addAttribute("title", "Add a new Genre | FMusic Administration");
+        model.addAttribute("title", "Add a new Genre | GEMusic Administration");
         return "admin/genre/create";
     }
 
@@ -91,7 +91,7 @@ public class GenreManagementController {
     public String editGenre(@PathVariable Integer id, Model model) {
         Genre genre = genreService.findById(id);
         model.addAttribute("genre", genre);
-        model.addAttribute("title", "Edit Genre details | FMusic Administration");
+        model.addAttribute("title", "Edit Genre details | GEMusic Administration");
         return "admin/genre/edit";
     }
 

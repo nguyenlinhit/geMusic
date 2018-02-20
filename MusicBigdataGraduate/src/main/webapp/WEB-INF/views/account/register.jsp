@@ -17,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="icon" type="image/png" href="<c:url value="/static/favicon.png" />" />
 
-    <title>Register | FMusic</title>
+    <title>Register | GEMusic</title>
 
     <link rel="stylesheet" type="text/css" href="<c:url value="/static/css/bootstrap.min.css"/>">
     <link rel="stylesheet" type="text/css" href="<c:url value="/static/font-awesome/css/font-awesome.css"/>">
@@ -39,7 +39,7 @@
 
 <div class="middle-box text-center loginscreen animated fadeInDown">
     <div>
-        <h3>Register to FMusic</h3>
+        <h3>Register to GEMusic</h3>
         <p>Create account to see it in action.</p>
 
         <form:form method="POST" modelAttribute="user" class="m-t" id="registerForm">

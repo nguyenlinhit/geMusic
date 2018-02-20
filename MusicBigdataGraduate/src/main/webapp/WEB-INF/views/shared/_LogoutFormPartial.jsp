@@ -1,4 +1,4 @@
-<jsp:useBean id="_csrf" scope="request" type="org.springframework.data.rest.core.projection.ProjectionDefinitions"/>
+
 <%--
   Created by IntelliJ IDEA.
   User: nguye

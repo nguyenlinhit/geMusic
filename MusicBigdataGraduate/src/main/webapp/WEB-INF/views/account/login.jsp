@@ -17,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="icon" type="image/png" href="<c:url value="/static/favicon.png" />" />
 
-    <title>Login | FMusic</title>
+    <title>Login | GEMusic</title>
 
     <link rel="stylesheet" type="text/css" href="<c:url value="/static/css/bootstrap.min.css"/>">
     <link rel="stylesheet" type="text/css" href="<c:url value="/static/font-awesome/css/font-awesome.css"/>">
@@ -33,7 +33,7 @@
     <div class="row">
 
         <div class="col-md-6">
-            <h2 class="font-bold">Welcome to FMusic</h2>
+            <h2 class="font-bold">Welcome to GEMusic</h2>
             <p>Perfectly designed and precisely prepared admin theme with over 50 pages with extra new web app views.</p>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
             <p>When an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
@@ -73,7 +73,7 @@
                     <a class="btn btn-sm btn-white btn-block" href="register.html">Create an account</a>
                 </form>
                 <p class="m-t">
-                    <small>Register from today to get more fun on FMusic with Free VIP.</small>
+                    <small>Register from today to get more fun on GEMusic with Free VIP.</small>
                 </p>
             </div>
         </div>

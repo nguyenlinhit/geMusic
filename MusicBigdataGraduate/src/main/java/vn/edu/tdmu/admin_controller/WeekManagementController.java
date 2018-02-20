@@ -36,7 +36,7 @@ public class WeekManagementController {
     public String listWeeks(Model model) {
         List<Week> weeks = weekService.findAll();
         model.addAttribute("weeks", weeks);
-        model.addAttribute("title", "Manage Weeks | FMusic Administration");
+        model.addAttribute("title", "Manage Weeks | GEMusic Administration");
         return "admin/week/list";
     }
 
@@ -45,7 +45,7 @@ public class WeekManagementController {
     public String details(@PathVariable Integer id, Model model) {
         Week week = weekService.findById(id);
         model.addAttribute("week", week);
-        model.addAttribute("title", "Week Details | FMusic Administration");
+        model.addAttribute("title", "Week Details | GEMusic Administration");
         return "admin/week/details";
     }
 
@@ -54,7 +54,7 @@ public class WeekManagementController {
     public String newWeek(Model model) {
         Week week = new Week();
         model.addAttribute("week", week);
-        model.addAttribute("title", "Add a new Week | FMusic Administration");
+        model.addAttribute("title", "Add a new Week | GEMusic Administration");
         return "admin/week/create_dpk";
     }
 
@@ -80,7 +80,7 @@ public class WeekManagementController {
     public String editWeek(@PathVariable Integer id, Model model) {
         Week week = weekService.findById(id);
         model.addAttribute("week", week);
-        model.addAttribute("title", "Edit Week details | FMusic Administration");
+        model.addAttribute("title", "Edit Week details | GEMusic Administration");
         return "admin/week/edit_dpk";
     }
 

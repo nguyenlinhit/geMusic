@@ -64,7 +64,7 @@ public class SongManagementController {
     public String listSongs(Model model) {
         List<Song> songs = songService.findAll();
         model.addAttribute("songs", songs);
-        model.addAttribute("title", "Manage Songs | FMusic Administration");
+        model.addAttribute("title", "Manage Songs | GEMusic Administration");
         return "admin/song/list";
     }
 
@@ -73,7 +73,7 @@ public class SongManagementController {
     public String details(@PathVariable Integer id, Model model) {
         Song song = songService.findById(id);
         model.addAttribute("song", song);
-        model.addAttribute("title", "Song Details | FMusic Administration");
+        model.addAttribute("title", "Song Details | GEMusic Administration");
         return "admin/song/details";
     }
 
@@ -82,7 +82,7 @@ public class SongManagementController {
     public String newSong(Model model) {
         Song song = new Song();
         model.addAttribute("song", song);
-        model.addAttribute("title", "Add a new Song | FMusic Administration");
+        model.addAttribute("title", "Add a new Song | GEMusic Administration");
 
         return "admin/song/create";
     }
@@ -138,7 +138,7 @@ public class SongManagementController {
     public String editSong(@PathVariable Integer id, Model model) {
         Song song = songService.findById(id);
         model.addAttribute("song", song);
-        model.addAttribute("title", "Edit Song details | FMusic Administration");
+        model.addAttribute("title", "Edit Song details | GEMusic Administration");
         return "admin/song/edit";
     }
 

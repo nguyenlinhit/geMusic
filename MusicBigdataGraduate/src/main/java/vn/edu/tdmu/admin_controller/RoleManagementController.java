@@ -42,7 +42,7 @@ public class RoleManagementController {
     public String listRoles(Model model) {
         List<Role> roles = roleService.findAll();
         model.addAttribute("roles", roles);
-        model.addAttribute("title", "Manage Roles | FMusic Administration");
+        model.addAttribute("title", "Manage Roles | GEMusic Administration");
         return "admin/role/list";
     }
 
@@ -51,7 +51,7 @@ public class RoleManagementController {
     public String details(@PathVariable Integer id, Model model) {
         Role role = roleService.findById(id);
         model.addAttribute("role", role);
-        model.addAttribute("title", "Role Details | FMusic Administration");
+        model.addAttribute("title", "Role Details | GEMusic Administration");
         return "admin/role/details";
     }
 
@@ -60,7 +60,7 @@ public class RoleManagementController {
     public String newRole(Model model) {
         Role role = new Role();
         model.addAttribute("role", role);
-        model.addAttribute("title", "Add a new Role | FMusic Administration");
+        model.addAttribute("title", "Add a new Role | GEMusic Administration");
         return "admin/role/create";
     }
 
@@ -91,7 +91,7 @@ public class RoleManagementController {
     public String editRole(@PathVariable Integer id, Model model) {
         Role role = roleService.findById(id);
         model.addAttribute("role", role);
-        model.addAttribute("title", "Edit Role details | FMusic Administration");
+        model.addAttribute("title", "Edit Role details | GEMusic Administration");
         return "admin/role/edit";
     }
 

@@ -15,7 +15,7 @@
 <!-- TOP-BAR -->
 <div id="top-bar">
     <div class="container">
-        <div id="site-description">Welcome to FMUSIC site.</div>
+        <div id="site-description">Welcome to GEMusic site.</div>
         <ul id="top-links">
             <c:url var="uploadUrl" value="/playlist/upload" />
             <security:authorize access="! isAuthenticated()">
@@ -59,7 +59,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="<c:url value="/"/>"><img style="display:initial" src="<c:url value="/static/img/logo.png"/>" alt="FMUSIC" /></a>
+                <a class="navbar-brand" href="<c:url value="/"/>"><img style="display:initial" src="<c:url value="/static/img/logo.png"/>" alt="GEMusic" /></a>
             </div>
 
             <!-- Navigation links -->

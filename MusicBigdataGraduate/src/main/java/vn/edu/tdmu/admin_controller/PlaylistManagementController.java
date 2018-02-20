@@ -59,7 +59,7 @@ public class PlaylistManagementController {
     public String listPlaylists(Model model) {
         List<Playlist> playlists = playlistService.findAll();
         model.addAttribute("playlists", playlists);
-        model.addAttribute("title", "Manage Playlists | FMusic Administration");
+        model.addAttribute("title", "Manage Playlists | GEMusic Administration");
         return "admin/playlist/list";
     }
 
@@ -68,7 +68,7 @@ public class PlaylistManagementController {
     public String details(@PathVariable Integer id, Model model) {
         Playlist playlist = playlistService.findById(id);
         model.addAttribute("playlist", playlist);
-        model.addAttribute("title", "Playlist Details | FMusic Administration");
+        model.addAttribute("title", "Playlist Details | GEMusic Administration");
         return "admin/playlist/details";
     }
 
@@ -77,7 +77,7 @@ public class PlaylistManagementController {
     public String newPlaylist(Model model) {
         Playlist playlist = new Playlist();
         model.addAttribute("playlist", playlist);
-        model.addAttribute("title", "Add a new Playlist | FMusic Administration");
+        model.addAttribute("title", "Add a new Playlist | GEMusic Administration");
         return "admin/playlist/create";
     }
 
@@ -125,7 +125,7 @@ public class PlaylistManagementController {
     public String editPlaylist(@PathVariable Integer id, Model model) {
         Playlist playlist = playlistService.findById(id);
         model.addAttribute("playlist", playlist);
-        model.addAttribute("title", "Edit Playlist details | FMusic Administration");
+        model.addAttribute("title", "Edit Playlist details | GEMusic Administration");
         return "admin/playlist/edit";
     }
 

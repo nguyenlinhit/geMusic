@@ -31,7 +31,7 @@
 
 <div class="container loginscreen animated fadeInDown" style="padding-top:40px">
     <div>
-        <h5 class="logo-name" style="font-size:100px">FMusic</h5>
+        <h5 class="logo-name" style="font-size:100px">GEMusic</h5>
     </div>
     <div>
         <h3>Registration Successful</h3>
