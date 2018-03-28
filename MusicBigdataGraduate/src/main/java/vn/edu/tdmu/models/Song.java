@@ -213,11 +213,11 @@ public final class Song extends BaseEntity{
         this.onHome = onHome;
     }
 
-    public Boolean getPublished() {
+    public Boolean getIsPublished() {
         return isPublished;
     }
 
-    public void setPublished(Boolean published) {
+    public void setIsPublished(Boolean published) {
         isPublished = published;
     }
 

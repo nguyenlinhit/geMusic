@@ -18,7 +18,6 @@
             <li class="nav-header">
                 <div class="profile-element">
                     <span>
-						<jsp:useBean id="loginModel" scope="application" type="vn.edu.tdmu.models.Playlist"/>
 						<c:if test="${not empty loginModel.imageUrl}">
                             <img alt="image" class="img-circle img-avatar-size" src="<c:url value="${loginModel.imageUrl}" />" />
                         </c:if>

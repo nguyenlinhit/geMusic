@@ -27,7 +27,6 @@
         <tiles:getAsString name="title" />
     </title>
 
-    <jsp:useBean id="stylesheets" scope="request" type="java.util.List"/>
     <c:forEach var="css" items="${stylesheets}">
         <link rel="stylesheet" type="text/css" href="<c:url value="${css}"/>">
     </c:forEach>
@@ -56,7 +55,6 @@
 
 <%@ include file="../_LogoutFormPartial.jsp"%>
 
-<jsp:useBean id="javascripts" scope="request" type="java.util.List"/>
 <c:forEach var="script" items="${javascripts}">
     <script src="<c:url value="${script}"/>"></script>
 </c:forEach>

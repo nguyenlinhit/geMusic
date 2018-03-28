@@ -9,7 +9,7 @@ public enum PlaylistType{
 
     String playlistType;
 
-    private PlaylistType(String playlistType){
+    PlaylistType(String playlistType){
         this.playlistType = playlistType;
     }
 

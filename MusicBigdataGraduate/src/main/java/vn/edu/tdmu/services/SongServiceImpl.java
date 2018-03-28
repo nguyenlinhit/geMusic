@@ -101,7 +101,7 @@ public class SongServiceImpl implements SongService{
 
         Song updated = findSongEntryById(updatedEntry.getId());
         updated.update(updatedEntry.getName(), updatedEntry.getUrl(), updatedEntry.getTotalView(), updatedEntry.getWeekViews(),
-                updatedEntry.getCountry(), updatedEntry.getDescription(), updatedEntry.getOnHome(), updatedEntry.getPublished(),
+                updatedEntry.getCountry(), updatedEntry.getDescription(), updatedEntry.getOnHome(), updatedEntry.getIsPublished(),
                 updatedEntry.getGenre(), updatedEntry.getType());
 
         //We need to flush the changes or otherwise the returned object

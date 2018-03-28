@@ -6,11 +6,16 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
-<html>
-<head>
-    <title>Title</title>
-</head>
-<body>
+<%@ include file="../shared/taglib.jsp"%>
 
-</body>
-</html>
+<main>
+    <section id="content">
+        <div class="container">
+            <div class="error-404">
+                <h1 style="font-size:200px;margin-bottom:0">:D</h1>
+                <h2>Upload successfully.</h2>
+                <p>please wait while we check your new song. <a href='<c:url value="/"/>'>Return to our homepage.</a></p>
+            </div>
+        </div>
+    </section>
+</main>

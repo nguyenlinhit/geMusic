@@ -114,7 +114,7 @@ public class InitDbService {
                 s.setName("Generated song " + i);
                 s.setUrl("/static/data/mp3/Runaway - Ed Sheeran.mp3");
                 s.addArtist(artist);
-                s.setPublished(true);
+                s.setIsPublished(true);
                 s.setWeekViews(0);
                 if (i < 50) {
                     s.setGenre(popG);
@@ -141,14 +141,14 @@ public class InitDbService {
         s1.setName("I Can't Make You Love Me");
         s1.addArtist(artist);
         s1.setUrl("/static/data/mp3/Josh Kaufman - I Can't Make You Love Me - Studio Version - The Voice 2014.mp3");
-        s1.setPublished(true);
+        s1.setIsPublished(true);
         s1.setOnHome(true);
 
         Song s2 = new Song();
         s2.setName("Too Little Too Late");
         s2.addArtist(artist);
         s2.setUrl("/static/data/mp3/Too Little Too Late.mp3");
-        s2.setPublished(true);
+        s2.setIsPublished(true);
         s2.setOnHome(true);
 
         List<Song> lsSongs = new ArrayList<Song>();

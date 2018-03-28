@@ -140,7 +140,8 @@ public class PlaylistServiceImpl implements PlaylistService{
         types.add(PlaylistType.COLLECTION.getPlaylistType());
 
         PageRequest request = new PageRequest(0, PAGE_SIZE, Sort.Direction.DESC, "id");
-        Page<Playlist> playlistEntries = this.repository.findByOnHomeInAndTypeIn(onHomes, types, request);
+
+        Page<Playlist> playlistEntries = repository.findByOnHomeInAndTypeIn(onHomes, types, request);
         LOGGER.info("Found {} playlist entries", playlistEntries.getContent().size());
 
         return playlistEntries;

@@ -171,7 +171,7 @@
 <script>
     $(document).ready(function() {
         //data 
-        var data = ${songs};
+        var data = ${songPlaylists};
         //create playlist
         var myPlaylist = [];
         $(data).each(function(i, sp) {
